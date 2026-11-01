@@ -1,61 +1,134 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="nl">
 <head>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     
+    
     <title>Pagina voor mijn formulier</title>
     <link rel="icon" href="favicon_io/favicon.ico" type="image/x-icon">
 </head>
 <body>
-        <nav>
-    <a href="index.html">Start </a>
-    <a href="overmij.html">Over mij</a>
-    <a href="cv.html"> CV </a>
-    <a href="project.html">projecten </a>   
-    <a href="ervaring.html">Ervaring </a>   
-    <a href="hobby.html">Hobby's</a>
-    <a href="contact.html">Contact </a>
-      </nav>
+  
+<nav class="navbar navbar-expand-lg custom-navbar">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+     <ul class="navbar-nav ms-auto">
+     <li class="nav-item">
+          <a class="nav-link " href="index.html">Start</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link "  href="overmij.html">Over mij</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="cv.html">CV</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="project.html">Projecten</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" href="ervaring.html">Ervaring</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" href="hobby.html">Hobby's</a>
+        </li>
+        <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="contact.html">Contact</a>
+</li>
+        
+        
+        
+      </ul>
+    </div>
+  </div>
+</nav>
       <h1>Contact</h1>
       <p>Heb je een vraag, wil je meer weten over mijn projecten of contact met mij 
 opnemen? Stuur mij gerust een bericht.</p>
 
-   <form action="https://tm-statweb.be/forms.php" method="post">
-
-    <div>
-    <label for="emailadress">E-mailadres:</label>
-     <input type="email" id="emailadress" name="mail" required>
-     </div>
-
-     <div>
-      <label for="naam">Naam:</label>
-      <input type="text" id="naam" name="naam" required>
-      </div>
-      
-<div>
-    <label for="onderwerp">Onderwerp:</label>
-    <input type="text" id="onderwerp" name="onderwerp" required>
-</div>
-
-      <div>
-      <label for="bericht">Bericht</label>
-      <textarea name="berichtvanmij" id="bericht" rows="10"></textarea>
-      </div>
-
-     <input type="submit"  value="verstuur">
-
-   </form>
    
-<div class="social-icons">
-    <a href="https://www.instagram.com/shayma.vibes?cplk=MTE5NmI5YmJnaTl1aA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-        <img src="https://cdn.simpleicons.org/instagram/C98F9B" alt="">
-    </a>
+<form action="https://tm-statweb.be/forms.php" method="post" class="contact-form">
 
-    
-    <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-        <img src="https://cdn.simpleicons.org/github/C98F9B" alt="">
-    </a>
-</div>
+    <div class="mb-3">
+        <label for="naam" class="form-label">Volledige naam:</label>
+        <input type="text" class="form-control" id="naam"
+               name="naam" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="emailadress" class="form-label">E-mailadres:</label>
+        <input type="email" class="form-control" id="emailadress"
+               name="mail" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="vaardigheid" class="form-label">
+            Waarover wil je meer weten?
+        </label>
+
+        <select class="form-select" id="vaardigheid" name="vaardigheid" required>
+            <option value="" selected disabled>Kies een onderwerp</option>
+            <option value="programmeren">Programmeren</option>
+            <option value="webdesign">Webdesign</option>
+            <option value="grafisch ontwerp">Grafisch ontwerp</option>
+            <option value="projecten">Mijn projecten</option>
+            <option value="andere">Andere</option>
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label for="bericht" class="form-label">Je vraag of bericht:</label>
+        <textarea class="form-control" id="bericht"
+                  name="berichtvanmij" rows="6" required></textarea>
+    </div>
+
+    <button type="submit" class="btn custom-btn">Verstuur</button>
+
+</form>
+
+   
+<footer class="site-footer">
+    <div class="container">
+        <div class="row align-items-center text-center g-4">
+
+            <div class="col-md-6">
+                <p class="mb-0">
+                    &copy; 2026 Shayma Khaled. Alle rechten voorbehouden.
+                </p>
+            </div>
+
+            <div class="col-md-6">
+                <p>Volg mij online</p>
+
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/shayma.vibes/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="Instagram">
+                        <img src="https://cdn.simpleicons.org/instagram/C98F9B"
+                             alt="Instagram">
+                    </a>
+
+                    <a href="https://github.com/1984-web"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="GitHub">
+                        <img src="https://cdn.simpleicons.org/github/C98F9B"
+                             alt="GitHub">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
