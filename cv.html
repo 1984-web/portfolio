@@ -1,103 +1,255 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CV - Shayma</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+
+    <!-- Swiper CSS: externe carousel-plugin -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <!-- Eigen CSS -->
     <link rel="stylesheet" href="style.css">
-        <link rel="icon" href="favicon_io/favicon.ico" type="image/x-icon">
-    <title>CV</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon_io/favicon.ico" type="image/x-icon">
 </head>
+
 <body>
 
-    <nav>
-        <a href="index.html">Start</a>
-        <a href="overmij.html">Over mij</a>
-        <a href="cv.html">CV</a>
-        <a href="project.html">Projecten</a>
-        <a href="ervaring.html">Ervaring</a>
-        <a href="hobby.html">Hobby's</a>
-        <a href="contact.html">Contact</a>
+    <!-- Navigatie -->
+    <nav class="navbar navbar-expand-lg custom-navbar">
+        <div class="container-fluid">
+
+            <button class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Start</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="overmij.html">Over mij</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active"
+                           aria-current="page"
+                           href="cv.html">CV</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="project.html">Projecten</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="ervaring.html">Ervaring</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="hobby.html">Hobby's</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
     </nav>
 
+
+    <!-- Hoofdinhoud -->
     <main class="cv-pagina">
+
+        <!-- Profielfoto -->
+        <div class="cv-foto text-center mb-4">
+
+            <img src="Foto/avatar.jpg"
+                 alt="Avatar van Shayma"
+                 class="img-fluid rounded-circle">
+
+        </div>
 
         <h1>CV</h1>
 
         <div class="cv-container">
 
+            <!-- Linkerkolom -->
             <div class="cv-kolom">
 
+                <!-- Opleiding -->
                 <section class="cv-sectie">
+
                     <h2>Opleiding</h2>
+
                     <ul>
                         <li>Graduaat Programmeren – Thomas More, Geel</li>
                         <li>Webdesign opleiding</li>
                         <li>Nederlandse taalcursus – CVO</li>
                         <li>Eerder gestudeerd: Bedrijfskunde</li>
                     </ul>
+
                 </section>
 
+
+                <!-- Technische vaardigheden met Swiper -->
                 <section class="cv-sectie">
+
                     <h2>Technische vaardigheden</h2>
-                    <ul>
-                        <li>Webdesign</li>
-                        <li>HTML &amp; CSS</li>
-                        <li>Basiskennis Python</li>
-                        <li>Adobe-programma's</li>
-                    </ul>
+
+                    <div class="swiper skillsSwiper">
+
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide">
+                                <img src="Foto/HTML5_logo_and_wordmark.svg.webp"
+                                     class="skill-logo"
+                                     alt="HTML-logo">
+                                <p>HTML</p>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="Foto/css3-logo.png"
+                                     class="skill-logo"
+                                     alt="CSS-logo">
+                                <p>CSS</p>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="Foto/JavaScript-Logo.png"
+                                     class="skill-logo"
+                                     alt="JavaScript-logo">
+                                <p>JavaScript</p>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="Foto/Csharp_Logo.png"
+                                     class="skill-logo"
+                                     alt="C-sharp-logo">
+                                <p>C#</p>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="Foto/bootstrap-icon-b-letter-logo_781017-7.avif"
+                                     class="skill-logo"
+                                     alt="Bootstrap-logo">
+                                <p>Bootstrap</p>
+                            </div>
+
+                        </div>
+
+                        <!-- Navigatieknoppen -->
+                        <div class="swiper-button-prev"
+                             aria-label="Vorige vaardigheid"></div>
+
+                        <div class="swiper-button-next"
+                             aria-label="Volgende vaardigheid"></div>
+
+                        <!-- Paginatie -->
+                        <div class="swiper-pagination"></div>
+
+                    </div>
+
                 </section>
 
+
+                <!-- Creatieve vaardigheden -->
                 <section class="cv-sectie">
+
                     <h2>Creatieve vaardigheden</h2>
+
                     <ul>
                         <li>Grafisch ontwerp</li>
                         <li>Webdesign</li>
                         <li>Tekenen</li>
                         <li>Werken met Adobe-programma's</li>
                     </ul>
+
                 </section>
 
             </div>
 
+
+            <!-- Rechterkolom -->
             <div class="cv-kolom">
 
+                <!-- Werkervaring -->
                 <section class="cv-sectie">
+
                     <h2>Werkervaring</h2>
+
                     <ul>
                         <li>Jobstudent – Action</li>
                         <li>Vrijwilligerswerk – Arabische les aan kinderen</li>
                     </ul>
+
                 </section>
 
+
+                <!-- Talenkennis -->
                 <section class="cv-sectie">
-            
-                    <table>
-    <caption>Talenkennis</caption>
-    <thead>
-        <tr>
-            <th scope="col">Taal</th>
-            <th scope="col">Niveau</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Arabisch</td>
-            <td>Moedertaal</td>
-        </tr>
-        <tr>
-            <td>Nederlands</td>
-            <td>In ontwikkeling</td>
-        </tr>
-        <tr>
-            <td>Engels</td>
-            <td>Goed</td>
-        </tr>
-    </tbody>
-</table>
+
+                    <table class="cv-talen-tabel">
+
+                        <caption>Talenkennis</caption>
+
+                        <thead>
+                            <tr>
+                                <th scope="col">Taal</th>
+                                <th scope="col">Niveau</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td>Arabisch</td>
+                                <td>Moedertaal</td>
+                            </tr>
+
+                            <tr>
+                                <td>Nederlands</td>
+                                <td>In ontwikkeling</td>
+                            </tr>
+
+                            <tr>
+                                <td>Engels</td>
+                                <td>Goed</td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
                 </section>
 
+
+                <!-- Interesses -->
                 <section class="cv-sectie">
+
                     <h2>Interesses</h2>
+
                     <ul>
                         <li>Programmeren</li>
                         <li>Webdesign</li>
@@ -105,6 +257,7 @@
                         <li>Tekenen</li>
                         <li>Lezen</li>
                     </ul>
+
                 </section>
 
             </div>
@@ -112,6 +265,118 @@
         </div>
 
     </main>
+
+
+    <!-- Footer -->
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <div class="row align-items-center text-center g-4">
+
+                <div class="col-md-6">
+
+                    <p class="mb-0">
+                        &copy; 2026 Shayma Khaled. Alle rechten voorbehouden.
+                    </p>
+
+                </div>
+
+                <div class="col-md-6">
+
+                    <p>Volg mij online</p>
+
+                    <div class="social-icons">
+
+                        <a href="https://www.instagram.com/shayma.vibes/"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           aria-label="Instagram">
+
+                            <img src="https://cdn.simpleicons.org/instagram/C98F9B"
+                                 alt="Instagram">
+
+                        </a>
+
+                        <a href="https://github.com/1984-web"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           aria-label="GitHub">
+
+                            <img src="https://cdn.simpleicons.org/github/C98F9B"
+                                 alt="GitHub">
+
+                        </a>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </footer>
+
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Swiper JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+    <!-- Swiper instellingen -->
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const swiperElement = document.querySelector(".skillsSwiper");
+
+            if (swiperElement && typeof Swiper !== "undefined") {
+
+                new Swiper(swiperElement, {
+
+                    slidesPerView: 3,
+                    spaceBetween: 15,
+                    loop: true,
+                    watchOverflow: true,
+
+                    navigation: {
+                        nextEl: ".skillsSwiper .swiper-button-next",
+                        prevEl: ".skillsSwiper .swiper-button-prev"
+                    },
+
+                    pagination: {
+                        el: ".skillsSwiper .swiper-pagination",
+                        clickable: true
+                    },
+
+                    breakpoints: {
+
+                        0: {
+                            slidesPerView: 1
+                        },
+
+                        576: {
+                            slidesPerView: 2
+                        },
+
+                        992: {
+                            slidesPerView: 3
+                        }
+
+                    }
+
+                });
+
+            } else {
+
+                console.error("Swiper kon niet worden geladen. Controleer de internetverbinding.");
+
+            }
+
+        });
+
+    </script>
 
 </body>
 </html>

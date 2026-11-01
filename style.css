@@ -1,5 +1,3 @@
-
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 * {
@@ -77,14 +75,13 @@ nav a:hover {
     line-height: 1.8;
 }
 
-/* Avatar area */
-
-
+/* Images */
 img {
     max-width: 100%;
     height: auto;
     display: block;
 }
+
 .about-content .avatar img {
     width: 100%;
     height: 100%;
@@ -95,7 +92,6 @@ img {
 }
 
 /* Contact pagina */
-
 h1 {
     text-align: center;
     color: #C98F9B;
@@ -114,7 +110,6 @@ p {
     padding: 0 20px;
 }
 
-
 form {
     max-width: 550px;
     margin: 0 auto 60px;
@@ -129,14 +124,12 @@ form div {
     margin-bottom: 20px;
 }
 
-
 label {
     display: block;
     color: #F7F1E8;
     margin-bottom: 8px;
     font-size: 15px;
 }
-
 
 input[type="text"],
 input[type="email"],
@@ -153,7 +146,6 @@ textarea {
 }
 
 /* Als je in een veld klikt */
-
 input[type="text"]:focus,
 input[type="email"]:focus,
 textarea:focus {
@@ -166,7 +158,6 @@ textarea {
 }
 
 /* Verstuurknop */
-
 input[type="submit"] {
     padding: 12px 28px;
     background-color: #C98F9B;
@@ -184,8 +175,8 @@ input[type="submit"]:hover {
     box-shadow: 0 0 15px rgba(201, 143, 155, 0.5);
     transform: translateY(-2px);
 }
-/* Projecten pagina */
 
+/* Projecten pagina */
 .projecten-pagina {
     max-width: 1150px;
     margin: 150px auto 60px;
@@ -268,14 +259,12 @@ input[type="submit"]:hover {
     transform: translateY(-2px);
 }
 
-
 /* Ervaring pagina */
 .ervaring-pagina {
     max-width: 650px;
     margin: 0 auto 40px;
-    padding: 20px 20px 20px;
+    padding: 20px;
 }
-
 
 .ervaring-pagina h1 {
     color: #C98F9B;
@@ -310,15 +299,12 @@ input[type="submit"]:hover {
     margin: 0;
 }
 
-
 /* CV pagina */
-
 .cv-pagina {
-    max-width: 750px;
-    margin: 0 auto;
-    padding: 20px 20px 20px;
+    max-width: 1000px;
+    margin: 125px auto 0;
+    padding: 20px;
 }
-
 
 .cv-pagina h1 {
     color: #C98F9B;
@@ -326,24 +312,26 @@ input[type="submit"]:hover {
     font-size: 50px;
     font-weight: 500;
     text-align: left;
-    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 25px;
 }
-
 
 .cv-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     gap: 35px;
     align-items: start;
 }
 
 .cv-kolom {
+    min-width: 0;
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
 .cv-sectie {
+    min-width: 0;
     padding-bottom: 15px;
     border-bottom: 1px solid rgba(201, 143, 155, 0.3);
 }
@@ -355,7 +343,6 @@ input[type="submit"]:hover {
     font-weight: 500;
     margin-bottom: 10px;
 }
-
 
 .cv-sectie ul {
     color: #F7F1E8;
@@ -373,11 +360,15 @@ input[type="submit"]:hover {
 .cv-sectie li::marker {
     color: #C98F9B;
 }
-/* Tabel */
-table {
+
+/* Tabel talenkennis */
+.cv-talen-tabel {
+    display: table;
+    visibility: visible;
+    opacity: 1;
     width: 100%;
     max-width: 600px;
-    margin: 30px auto;
+    margin: 10px auto 20px;
     border-collapse: collapse;
     background-color: rgba(201, 143, 155, 0.08);
     color: #F7F1E8;
@@ -386,29 +377,28 @@ table {
     box-shadow: 0 0 20px rgba(201, 143, 155, 0.15);
 }
 
-/* Titel van de tabel */
-caption {
+.cv-talen-tabel caption {
+    caption-side: top;
     color: #C98F9B;
     font-family: "Poppins", sans-serif;
     font-size: 20px;
     font-weight: 600;
-    margin-bottom: 15px;
+    text-align: center;
+    padding-bottom: 10px;
 }
 
-/* Tabelkoppen */
-th {
+.cv-talen-tabel th {
     background-color: #C98F9B;
     color: #101B36;
     padding: 14px;
     text-align: left;
 }
 
-/* Tabelcellen */
-td {
+.cv-talen-tabel td {
+    color: #F7F1E8;
     padding: 12px 14px;
     border-bottom: 1px solid rgba(201, 143, 155, 0.3);
 }
-
 
 /* Hobby-pagina */
 .hobby-pagina {
@@ -492,7 +482,6 @@ td {
     align-items: center;
     text-align: center;
     padding: 120px 20px 40px;
-    box-sizing: border-box;
 }
 
 .avatar-container {
@@ -527,7 +516,6 @@ td {
     margin: 0;
 }
 
-
 /* Avatar op de Over mij-pagina */
 .about-content .avatar {
     width: 380px;
@@ -546,7 +534,7 @@ td {
     display: block;
 }
 
-
+/* Social media */
 .social-icons {
     display: flex;
     flex-direction: row;
@@ -583,4 +571,310 @@ td {
 
 .social-icons a:hover img {
     filter: drop-shadow(0 0 8px #C98F9B);
+}
+
+.custom-navbar .nav-link {
+    white-space: nowrap;
+}
+
+.custom-btn {
+    background-color: #C98F9B;
+    color: #101B36;
+    border: 1px solid #C98F9B;
+    border-radius: 25px;
+    padding: 10px 25px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.custom-btn:hover {
+    background-color: #F7F1E8;
+    color: #101B36;
+    border-color: #F7F1E8;
+}
+
+/* Bootstrap cards */
+.card {
+    background-color: #1A2745;
+    color: #F7F1E8;
+    border: 1px solid rgba(201, 143, 155, 0.5);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.card .card-title,
+.card .card-text {
+    color: #F7F1E8;
+}
+
+.card .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* CV profielfoto */
+.cv-foto img {
+    display: block;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    object-fit: cover;
+    border: 3px solid #C98F9B;
+    box-shadow: 0 0 20px rgba(201, 143, 155, 0.4);
+}
+
+/* Swiper - technische vaardigheden */
+.skillsSwiper {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 25px 35px 50px;
+}
+
+.skillsSwiper .swiper-wrapper {
+    align-items: center;
+}
+
+.skillsSwiper .swiper-slide {
+    min-width: 0;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.skillsSwiper .swiper-slide .skill-logo {
+    display: block;
+    width: 80px;
+    height: 80px;
+    max-width: 100%;
+    object-fit: contain;
+    margin: 0 auto 10px;
+}
+
+.skillsSwiper .swiper-slide p {
+    width: 100%;
+    max-width: none;
+    padding: 0;
+    margin: 8px 0 0;
+    text-align: center;
+    font-size: 14px;
+    color: #F7F1E8;
+}
+
+.skillsSwiper .swiper-button-next,
+.skillsSwiper .swiper-button-prev {
+    color: #C98F9B;
+}
+
+.skillsSwiper .swiper-button-next::after,
+.skillsSwiper .swiper-button-prev::after {
+    font-size: 20px;
+}
+
+.skillsSwiper .swiper-pagination {
+    bottom: 5px;
+}
+
+.skillsSwiper .swiper-pagination-bullet-active {
+    background: #C98F9B;
+}
+
+/* Hobby carousel */
+.hobby-carousel-img {
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+#hobbyCarousel .carousel-caption {
+    background-color: rgba(16, 27, 54, 0.85);
+    border-radius: 12px;
+    padding: 12px;
+}
+
+#hobbyCarousel .carousel-caption h5,
+#hobbyCarousel .carousel-caption p {
+    color: #F7F1E8;
+}
+
+/* Contact form */
+.contact-form {
+    width: 90%;
+    max-width: 650px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: #1A2745;
+    border: 1px solid rgba(201, 143, 155, 0.5);
+    border-radius: 15px;
+    color: #F7F1E8;
+}
+
+.contact-form .form-label {
+    color: #F7F1E8;
+}
+
+.contact-form .form-control,
+.contact-form .form-select {
+    background-color: #F7F1E8;
+    color: #101B36;
+    border-radius: 8px;
+}
+
+.contact-form .form-control:focus,
+.contact-form .form-select:focus {
+    border-color: #C98F9B;
+    box-shadow: 0 0 0 0.2rem rgba(201, 143, 155, 0.25);
+}
+
+body > h1,
+body > p {
+    text-align: center;
+    color: #F7F1E8;
+}
+
+/* Footer */
+.site-footer {
+    background-color: #1A2745;
+    color: #F7F1E8;
+    border-top: 1px solid rgba(201, 143, 155, 0.5);
+    padding: 25px 0;
+    margin-top: 50px;
+}
+
+.site-footer p {
+    margin-bottom: 10px;
+}
+
+.site-footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 10px 0 0;
+}
+
+.site-footer .social-icons img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Responsive: navigatie */
+@media (max-width: 991.98px) {
+    .custom-navbar {
+        width: calc(100% - 24px);
+        top: 12px;
+        padding: 10px 14px;
+    }
+
+    .custom-navbar .navbar-nav {
+        align-items: stretch;
+    }
+}
+
+/* Projecten: tablets */
+@media (max-width: 900px) {
+    .projecten-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* CV responsive */
+@media (max-width: 767.98px) {
+    .cv-container {
+        grid-template-columns: 1fr;
+    }
+
+    .cv-pagina {
+        padding: 15px;
+    }
+}
+
+/* Mobiele schermen */
+@media (max-width: 576px) {
+
+    .projecten-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .about-content .avatar {
+        width: min(280px, 100%);
+        height: auto;
+        aspect-ratio: 1 / 1;
+    }
+
+    .about-text h1 {
+        font-size: 36px;
+    }
+
+    .ervaring-pagina h1 {
+        font-size: 42px;
+    }
+
+    .hobby-sectie,
+    .hobby-sectie.omgekeerd {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+    }
+
+    .hobby-sectie img {
+        width: 100%;
+        height: 220px;
+    }
+
+    .avatar-container {
+        width: min(220px, 75vw);
+        height: min(220px, 75vw);
+    }
+
+    .cv-pagina h1 {
+        font-size: 38px;
+    }
+
+    .hobby-carousel-img {
+        height: 280px;
+    }
+
+    #hobbyCarousel .carousel-caption {
+        padding: 6px;
+    }
+
+    #hobbyCarousel .carousel-caption h5 {
+        font-size: 16px;
+    }
+
+    #hobbyCarousel .carousel-caption p {
+        font-size: 12px;
+        margin-bottom: 0;
+    }
+
+}
+/* Hobby carousel captions */
+
+#hobbyCarousel .carousel-caption {
+    background-color: rgba(16, 27, 54, 0.85);
+    border-radius: 12px;
+    padding: 12px;
+    text-align: center;
+}
+
+#hobbyCarousel .carousel-caption h5 {
+    color: #F7F1E8;
+    text-align: center;
+}
+
+#hobbyCarousel .carousel-caption p {
+    color: #F7F1E8;
+    text-align: center;
+    max-width: none;
+    padding: 0;
+    margin: 0;
 }
